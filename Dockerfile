@@ -1,4 +1,4 @@
-FROM dockerfile/java:oracle-java7
+FROM java:7
 MAINTAINER christlc
 
 RUN apt-get install -y wget tar sudo
