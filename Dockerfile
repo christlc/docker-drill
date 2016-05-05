@@ -5,11 +5,12 @@ RUN apt-get update
 RUN apt-get install -y wget tar sudo curl
 
 # get drill
-RUN curl -o drill.tar.gz http://www.apache.org/dyn/closer.lua?filename=drill/drill-1.6.0/apache-drill-1.6.0.tar.gz&action=download
+RUN curl -o apache-drill-1.6.0.tar.gz http://apache.mesi.com.ar/drill/drill-1.6.0/apache-drill-1.6.0.tar.gz
+
 # create Drill folder
 RUN sudo mkdir -p /opt/drill
 
 # extract Drill
-RUN tar -xvzf drill.tar.gz -C /opt/drill
+RUN tar -xvzf apache-drill-1.6.0.tar.gz -C /opt/drill
 
 CMD /opt/drill/apache-drill-1.6.0/bin/drill-embedded
