@@ -1,6 +1,7 @@
 FROM java:7
 MAINTAINER christlc
 
+RUN apt-get update
 RUN apt-get install -y wget tar sudo
 
 # get drill
